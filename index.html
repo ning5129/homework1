@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="back-box">
+        <p class="add-num" id="num">+1</p>
+        <div class="handle-main" id="handleMain">
+            <div class="wrist">
+            </div>
+            <div class="fist">
+            </div>
+            <div class="thumb">
+                <p class="thumb-zhijia">
+                </p>
+                <p class="thumb-guanjie">
+                </p>
+            </div>
+            <ul class="fingers">
+                <li class="finger">
+                    <span class="finger-guanjie"></span>
+                </li>
+                <li class="finger">
+                    <span class="finger-guanjie"></span>
+                </li>
+                <li class="finger">
+                    <span class="finger-guanjie"></span>
+                </li>
+                <li class="finger">
+                    <span class="finger-guanjie"></span>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</body>
+</html>
+<script type="text/javascript" src="./dist/index.js"></script>
+<style type="text/css">
+    div,
+    ul,
+    li,
+    p,
+    span {
+        margin: 0;
+        padding: 0;
+    }
+    ul,
+    li {
+        list-style: none;
+    }
+    .back-box {
+        width: 900px;
+        height: 700px;
+        position: relative;
+        background: -webkit-linear-gradient(top left, #99d38f, #d0d8cb);
+        background: linear-gradient(top left, #99d38f, #d0d8cb);
+
+    }
+    .add-num {
+        position: absolute;
+        left: 50%;
+        top: 25%;
+        z-index: 19;
+        color: #f00;
+        font-size: 24px;
+        display: none;
+        opacity: 1;
+    }
+    @-webkit-keyframes resize {
+        0% {
+            font-size: 24px;
+            color: rgba(255, 0, 0, 1);
+            top: 25%;
+            display: block;
+        }
+        50% {
+            font-size: 18px;
+            color: rgba(255, 0, 0, .5);
+            top: 20%;
+            display: block;   
+        }
+        100% {
+            font-size: 12px;
+            color: rgba(255, 0, 0, 0);
+            top: 15%;
+            display: none !important;
+        }
+    }
+    .showAnimate {
+        -webkit-animation-name: resize;
+        -webkit-animation-duration: 1.5s;
+        -webkit-animation-direction: alternate;
+        -webkit-animation-timing-function: ease-out;
+    }
+    .handle-main {
+        position: relative;
+        left: 25%;
+        top: 50%;
+    }
+
+    .wrist {
+        width: 200px;
+        height: 200px;
+        background: #f3c5ad;
+        border-top: 1px solid #d68a63;
+        position: absolute;
+        z-index: 10;
+    }
+    .fist {
+        width: 180px;
+        height: 300px;
+        border: 1px solid #d68a63;
+        border-radius: 20px 0 0 20px;
+        position: absolute;
+        background: #f3c5ad;
+        top: -50px;
+        left: 180px;
+    }
+    .thumb {
+        width: 70px;
+        height: 200px;
+        background: #f3c5ad;
+        transform: rotate(30deg);
+        border-radius: 100px;
+        position: absolute;
+        left: 195px;
+        top: -170px;
+        border-left: 1px solid #d68a63;
+        border-top: 1px solid #d68a63;
+    }
+    .thumb-zhijia {
+        width: 60px;
+        height: 70px;
+        position: absolute;
+        left: 4px;
+        top: -12px;
+        border-radius: 40px;
+        background-image: linear-gradient(to bottom,  rgba(250,229,218,1) 50%,   rgba(250,229,218,0) 100%);
+        background-image: -webkit-linear-gradient(to bottom,  rgba(250,229,218,1) 50%,   rgba(250,229,218,0) 100%);
+    }
+    .thumb-guanjie {
+        width: 60px;
+        height: 80px;
+        position: absolute;
+        top: 60px;
+        left: 4px;
+        border-radius: 40px;
+        background-image: linear-gradient(to bottom, rgba(233, 179, 151, 1) 10%, rgba(233, 179, 151, 0) 50%);
+        background-image: -webkit-linear-gradient(to bottom, rgba(233, 179, 151, 1) 10%, rgba(233, 179, 151, 0) 50%);
+    }
+    .fingers {
+        position: absolute;
+        left: 350px;
+        top: -50px;
+
+
+    }
+    .finger {
+        width: 80px;
+        height: 74px;
+        background: #f3c5ad;
+        border-right: 1px solid #d68a63;
+        border-top: 1px solid #d68a63;
+        border-radius: 0 40px 40px 0;
+        position: relative;
+    }
+    .finger:last-child {
+        height: 75px;
+        border-bottom: 1px solid #d68a63;
+    }
+    .finger-guanjie {
+        width: 90px;
+        height: 70px;
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        border-radius: 40px;
+        background-image: linear-gradient(to left,  rgba(250,229,218,1) 20%,   rgba(250,229,218,0) 80%);
+        background-image: -webkit-linear-gradient(to left,  rgba(250,229,218,1) 20%,   rgba(250,229,218,0) 80%);
+    }
+</style>
